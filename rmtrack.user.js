@@ -64,7 +64,7 @@ if (ot_main) {
 }
 
 var mo_drawer = new MutationObserver(function(ml){
-	var drawer = document.body.querySelector("div.drawer.peepr-drawer-container.open")
+	var drawer = document.querySelector("body > div.drawer")
 	if (drawer && !drawer.dataset.rmTrack) {
 		drawer.dataset.rmTrack = true
 		var mo = new MutationObserver(rm_mo)
