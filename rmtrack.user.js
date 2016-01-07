@@ -1,4 +1,4 @@
-// ==UserScript==
+﻿// ==UserScript==
 // @name        トラッキングを消すやつ
 // @namespace   http://js4.in/ns/
 // @include     https://www.tumblr.com/dashboard*
@@ -49,7 +49,7 @@ var tab = [
 },
 ]
 
-var ot_main
+var ot_main = null
 for (var i = 0; i < tab.length; i++) {
 	if (tab[i].uri.test(location.href)) {
 		ot_main = document.getElementById(tab[i].target)
@@ -57,9 +57,11 @@ for (var i = 0; i < tab.length; i++) {
 	}
 }
 
-rm(ot_main)
-var mo_main = new MutationObserver(rm_mo)
-mo_main.observe(ot_main, {childList: true, subtree: true})
+if (ot_main) {
+	rm(ot_main)
+	var mo_main = new MutationObserver(rm_mo)
+	mo_main.observe(ot_main, {childList: true, subtree: true})
+}
 
 var mo_drawer = new MutationObserver(function(ml){
 	var drawer = document.body.querySelector("div.drawer.peepr-drawer-container.open")
