@@ -13,8 +13,8 @@
 // see https://opensource.org/licenses/MIT
 
 function rm(root){
-	elems = root.querySelectorAll("a")
-	var match = /^http:\/\/t\.umblr\.com\/redirect\?.*?\bz=([^&]*)/
+	var elems = root.querySelectorAll("a")
+	var match = /^https?:\/\/t\.umblr\.com\/redirect\?.*?\bz=([^&]*)/
 	for (var i = 0; i < elems.length; i++) {
 		var e = elems[i]
 		var rr = match.exec(e.href)
