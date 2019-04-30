@@ -4,7 +4,8 @@
 // @include     https://www.tumblr.com/dashboard*
 // @include     https://www.tumblr.com/blog/*
 // @include     https://www.tumblr.com/search/*
-// @version     1
+// @version     1.0.2
+// @update      https://github.com/hcmiya/tumblr-userjs/raw/master/rmtrack.user.js
 // @grant       none
 // ==/UserScript==
 
